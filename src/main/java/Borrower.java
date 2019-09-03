@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+
+public class Borrower {
+
+    private ArrayList<Book> borrowedBooks;
+
+    public Borrower(){
+        this.borrowedBooks = new ArrayList<Book>();
+    }
+
+    public int numberOfBooksOnLoan() {
+        return this.borrowedBooks.size();
+    }
+
+    public void borrowBook(Library library, Book bookToBorrow) {
+        Book book = library.loanBook(bookToBorrow);
+        this.borrowedBooks.add(book);
+    }
+}
