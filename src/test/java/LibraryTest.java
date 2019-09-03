@@ -53,4 +53,17 @@ public class LibraryTest {
         library.loanBook(book1);
         assertEquals(3, library.getCollectionSize());
     }
+
+    @Test
+    public void canAddToGenres() {
+        assertEquals(2, library.getNumberOfGenres());
+
+    }
+
+    @Test
+    public void canCheckNumberOfBooksOfGenre() {
+        assertEquals(3, library.checkGenre("Feminist"));
+    }
+
+
 }
